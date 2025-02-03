@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #323AFF;
+    --color-primary-900: #161FFF;
+    /* for buttons and backgrounds */
+    --color-white-50: #F8F9FB;
+    /* for border inputs and containers */
+    --color-secondary-50: #E9E9E7;
+    /* for background badges */
+    --color-secondary-100: #E9E9E7;
+    /* for texts and span */
+    --color-secondary-200: #7C7C7C;
+    /* for subtitles */
+    --color-secondary-500: #3A393A;
+    /* for titles h1 */
+    --color-secondary-900: #0F0F10;
+
+    /* for badges */
+    --color-red-50: #FDE9EC;
+    /* for borders */
+    --color-red-100: #F0BEBF;
+    /* for backgrounds */
+    --color-red-200: #F8D0D0;
+    /* for titles */
+    --color-red-600: #EA7C7F;
+    /* for texts */
+    --color-red-800: #DD676A;
+
+    /* for badges */
+    --color-orange-50: #FEF4EA;
+    /* for borders */
+    --color-orange-100: #E9CFB6;
+    /* for backgrounds */
+    --color-orange-200: #F8E5CD;
+    /* for texts */
+    --color-orange-600: #E08F40;
+    /* for titles */
+    --color-orange-800: #CC7014;
+
+    /* for badges */
+    --color-green-50: #E5FBF3;
+    /* for borders */
+    --color-green-100: #B2E7D7;
+    /* for backgrounds */
+    --color-green-200: #C7F4E7;
+    /* for titles */
+    --color-green-600: #50946F;
+    /* for texts */
+    --color-green-800: #319C58;
+
+    /* for badges */
+    --color-blue-100: #C9D8F8;
+    /* for titles */
+    --color-blue-600: #4171C3;
+
+    /* for badges */
+    --text-sm: 12px;
+    /* for text paragraph */
+    --text-base: 14px;
+    /* for text subtitles */
+    --text-lg: 16px;
+    /* for text subtitles h3 */
+    --text-xl: 18px;
+    /* for text subtitles h2 */
+    --text-2xl: 24px;
+    /* for text subtitles h1 */
+    --text-3xl: 32px;
+
+    --font-family: "Instrument Sans", serif;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --width-as: 256px;
+    --max-width-as: 256px;
+    --max-width-main: 1184px;
+    --max-widht-imgP: 312px;
+    --max-height-imgP: 200px;
+
+    --width-prof: 45px;
+
+    --height-prof: 45px;
+
+}
+
+/* .instrument-sans-<uniquifier> {
+    font-family: "Instrument Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  } */
+
+body {
+    @apply bg-white-50;
+    @apply font-family;
+    @apply text-base text-secondary-200;
+    line-height: 1.5;
+
+}
+
+h1 {
+    @apply text-secondary-900;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+span {
+    line-height: 1.5;
+}
