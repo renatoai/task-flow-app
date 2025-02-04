@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap');
 @import "tailwindcss";
 
+
 @theme {
     --color-primary: #323AFF;
     --color-primary-900: #161FFF;
@@ -97,9 +98,7 @@
   } */
 
 body {
-    @apply bg-white-50;
-    @apply font-family;
-    @apply text-base text-secondary-200;
+    @apply bg-white-50 font-family text-base text-secondary-200;
     line-height: 1.5;
 
 }

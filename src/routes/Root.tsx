@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router";
-import Page from "../modules/projects/Page";
-import Dashboard from "../modules/dashboard/Page";
+import Page from "../admin/projects/Page";
+import Dashboard from "../admin/dashboard/Page";
 import Layout from "../layout/Layout";
-import ProjectView from "../modules/projects/ProjectView";
+import ProjectView from "../admin/projects/ProjectView";
 
-export default function RoutesPage() {
+export default function Root() {
     return (
         <Routes>
             <Route path="/" element={<Layout />} >

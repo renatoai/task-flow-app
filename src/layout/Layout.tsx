@@ -18,7 +18,7 @@ export default function Layout() {
                     </div>
                 </div>
             </header>
-            <main className="max-w-main w-full mx-auto flex flex-col gap-y-6 px-6">
+            <main className="max-w-main w-full mx-auto mb-8 flex flex-col gap-y-6 px-6">
                 <Outlet />
             </main>
         </div>
