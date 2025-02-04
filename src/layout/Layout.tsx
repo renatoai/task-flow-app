@@ -8,7 +8,7 @@ export default function Layout() {
         <>
             <Aside />
             <div className="ml-0 flex flex-col gap-y-6 md:ml-(--max-width-as)">
-                <header className="-z-20 w-full bg-white sticky top-0 flex justify-between items-center border-b border-b-secondary-100 px-4 py-4 md:z-10 md:px-6">
+                <header className="w-full bg-white sticky top-0 flex justify-between items-center border-b border-b-secondary-100 px-4 py-4 md:z-10 md:px-6">
                     <h2 className="text-2xl font-semibold text-secondary-900">Bienvenido de Nuevo 👋</h2>
                     <div className="flex items-center gap-x-2">
                         <div className="w-prof h-prof bg-secondary-100 rounded-full overflow-hidden">
@@ -20,7 +20,7 @@ export default function Layout() {
                         </div>
                     </div>
                 </header>
-                <main className="max-w-main w-full -z-30 mx-auto mb-8 flex flex-col gap-y-6 px-4 md:z-0 md:px-6">
+                <main className="max-w-main w-full mx-auto mb-8 flex flex-col gap-y-6 px-4 md:z-0 md:px-6">
                     <Outlet />
                 </main>
             </div>

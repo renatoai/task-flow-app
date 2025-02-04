@@ -6,7 +6,7 @@ export default function Aside() {
     console.log(menu)
 
     return (
-        <aside className={menu ? "max-w-as w-full fixed left-0 top-0 bottom-0 bg-white px-4 py-8 border-r border-r-secondary-100 transition duration-300 ease-in-out" : "max-w-as w-full fixed -left-full top-0 bottom-0 bg-white px-4 py-8 border-r border-r-secondary-100 transition duration-300 ease-in-out md:opacity-100 md:left-0"}>
+        <aside className={menu ? "max-w-as w-full fixed left-0 top-[75px] bottom-0 z-10 bg-white px-4 py-8 border-r border-r-secondary-100 transition duration-300 ease-in-out md:top-0" : "max-w-as w-full fixed -left-full top-[75px] bottom-0 z-10 bg-white px-4 py-8 border-r border-r-secondary-100 transition duration-300 ease-in-out md:opacity-100 md:top-0 md:left-0"}>
             <nav className="w-full h-full flex flex-col justify-between" onClick={() => setMenu(!menu)}>
                 <ul className="flex flex-col gap-y-2">
                     <li>
@@ -40,7 +40,7 @@ export default function Aside() {
                 </ul>
             </nav>
 
-            <button onClick={() => setMenu(!menu)} className="font-bold fixed z-50 right-20 top-5 p-2 bg-primary rounded-lg text-white md:hidden">
+            <button onClick={() => setMenu(!menu)} className="font-bold fixed right-20 top-5 p-2 bg-primary rounded-lg text-white md:hidden">
                 {
                     menu ?
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
