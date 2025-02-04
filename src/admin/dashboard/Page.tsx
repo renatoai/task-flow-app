@@ -7,7 +7,7 @@ export default function Dashboard() {
         <div className="w-full bg-white p-6 flex flex-col gap-6 rounded-2xl border border-secondary-100">
           <h3 className="text-xl text-secondary-900 font-semibold">Estadísticas del Proyecto</h3>
 
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center flex-wrap gap-6">
             <div className="flex items-center gap-x-2">
               <div className="w-12 h-12 bg-blue-100 flex justify-center items-center border border-blue-600 rounded-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +37,7 @@ export default function Dashboard() {
             </div>
 
           </div>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center flex-wrap gap-6">
             <div className="flex items-center gap-x-2">
               <div className="w-12 h-12 bg-orange-200 flex justify-center items-center border border-orange-600 rounded-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

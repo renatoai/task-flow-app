@@ -3,6 +3,7 @@ import Page from "../admin/projects/Page";
 import Dashboard from "../admin/dashboard/Page";
 import Layout from "../layout/Layout";
 import ProjectView from "../admin/projects/ProjectView";
+import Tags from "../admin/tags/Tags";
 
 export default function Root() {
     return (
@@ -11,7 +12,7 @@ export default function Root() {
                 <Route index element={<Dashboard />} />
                 <Route path="projects" element={<Page />} />
                 <Route path="projects/details" element={<ProjectView />} />
-                <Route path="services" element={<Dashboard />} />
+                <Route path="tags" element={<Tags />} />
             </Route>
 
             {/* <Route element={<AuthLayout />}>
