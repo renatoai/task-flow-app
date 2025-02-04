@@ -9,7 +9,7 @@ export default function Page() {
       <h2 className="text-secondary-900 text-2xl font-semibold">Dashboard</h2>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <div className="w-full bg-white flex flex-col gap-y-4 p-3 border border-secondary-100 rounded-2xl">
-          <HeaderTask status="Pendiente" title="Pendiente" tasks={16} to="/projects/details" />
+          <HeaderTask status="Pendiente" title="Pendiente" tasks={16} to="projects/details" />
           <hr className="border border-secondary-100 bg-transparent" />
           <CardTaskPending
             bgColor="red"
@@ -75,7 +75,7 @@ export default function Page() {
           <HeaderTask
             status="Completado"
             title="Completado"
-            tasks={2} to="/projects/details" />
+            tasks={2} to="projects/details" />
 
           <hr className="border border-secondary-100 bg-transparent" />
 

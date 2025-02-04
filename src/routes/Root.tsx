@@ -4,6 +4,7 @@ import Dashboard from "../admin/dashboard/Page";
 import Layout from "../layout/Layout";
 import ProjectView from "../admin/projects/ProjectView";
 import Tags from "../admin/tags/Tags";
+import Profile from "../admin/profile/Profile";
 
 export default function Root() {
     return (
@@ -13,6 +14,7 @@ export default function Root() {
                 <Route path="projects" element={<Page />} />
                 <Route path="projects/details" element={<ProjectView />} />
                 <Route path="tags" element={<Tags />} />
+                <Route path="profile" element={<Profile />} />
             </Route>
 
             {/* <Route element={<AuthLayout />}>
