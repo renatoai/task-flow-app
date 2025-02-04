@@ -12,17 +12,17 @@ export default function Aside() {
                     <li>
                         <NavLink to="/" className={({ isActive }) => isActive
                             ? 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold bg-primary text-white'
-                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'}>Dashboard</NavLink>
+                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} >Dashboard</NavLink>
                     </li>
                     <li>
                         <NavLink to="/projects" className={({ isActive }) => isActive
                             ? 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold bg-primary text-white'
-                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'}>Proyectos</NavLink>
+                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} viewTransition>Proyectos</NavLink>
                     </li>
                     <li>
                         <NavLink to="/tags" className={({ isActive }) => isActive
                             ? 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold bg-primary text-white'
-                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'}>Categorias</NavLink>
+                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} viewTransition>Categorias</NavLink>
                     </li>
                 </ul>
 
@@ -30,13 +30,16 @@ export default function Aside() {
                     <li>
                         <NavLink to="/profile" className={({ isActive }) => isActive
                             ? 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold bg-primary text-white'
-                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'}>Perfil</NavLink>
+                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} viewTransition>Perfil</NavLink>
                     </li>
                     <li>
-                        <button className="w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white active:bg-primary transition duration-200">Cerrar Sesión</button>
+                        <form action="login">
+                            <button className="w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white active:bg-primary transition duration-200">Cerrar Sesión</button>
+                        </form>
                     </li>
                 </ul>
             </nav>
+
             <button onClick={() => setMenu(!menu)} className="font-bold fixed z-50 right-20 top-5 p-2 bg-primary rounded-lg text-white md:hidden">
                 {
                     menu ?

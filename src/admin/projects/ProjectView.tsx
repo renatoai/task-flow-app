@@ -1,15 +1,16 @@
+import { Link } from "react-router";
 
 export default function ProjectView() {
     return (
         <>
             <div className="flex justify-between items-start">
                 <h2 className="text-secondary-900 text-2xl font-semibold">Proyectos</h2>
-                <a href="/projects" className="bg-primary text-white font-semibold flex items-center gap-x-2 px-4 py-3 rounded-lg hover:bg-primary-900 transition duration-200">
+                <Link to="/projects" className="bg-primary text-white font-semibold flex items-center gap-x-2 px-4 py-3 rounded-lg hover:bg-primary-900 transition duration-200">
                     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.5 4.66666L7.5 10.5L12.5 16.3333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     Atras
-                </a>
+                </Link>
             </div>
             <h3 className="text-xl text-secondary-500 font-semibold">Diseñar wireframes de la pantalla de inicio</h3>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">

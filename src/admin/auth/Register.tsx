@@ -1,7 +1,8 @@
+import { Link } from "react-router";
 
 export default function Register() {
     return (
-        <div className="w-full grid grid-cols-2 justify-center">
+        <div className="w-full grid grid-cols-2 justify-center bg-white">
             <div className="max-w-[350px] w-full mx-auto flex flex-col justify-center items-center gap-y-6">
                 <div className="w-full flex flex-col items-start gap-y-2">
                     <h2 className="text-3xl font-bold text-secondary-500">Registrarse</h2>
@@ -31,7 +32,7 @@ export default function Register() {
                     </div>
                     <button type="submit" className="w-full bg-primary px-4 py-3 rounded-xl border border-primary text-white font-semibold  hover:cursor-pointer hover:bg-primary-900 transition duration-200">Iniciar Sesión</button>
                 </form>
-                <span>Ya tiens cuenta? <a href="/register" className="font-semibold text-primary hover:text-primary-900 transition duration-200">Iniciar Sesión</a></span>
+                <span>Ya tiens cuenta? <Link to="/login" className="font-semibold text-primary hover:text-primary-900 transition duration-200">Iniciar Sesión</Link></span>
             </div>
             <div className="bg-primary h-screen flex flex-col justify-center items-center gap-y-6 ">
                 <img src="/wirefrime-alphaui.png" alt="" className="" />

@@ -5,6 +5,9 @@ import Layout from "../layout/Layout";
 import ProjectView from "../admin/projects/ProjectView";
 import Tags from "../admin/tags/Tags";
 import Profile from "../admin/profile/Profile";
+import Login from "../admin/auth/Login";
+import Register from "../admin/auth/Register";
+import AuthLayout from "../admin/auth/AuthLayout";
 
 export default function Root() {
     return (
@@ -15,12 +18,14 @@ export default function Root() {
                 <Route path="projects/details" element={<ProjectView />} />
                 <Route path="tags" element={<Tags />} />
                 <Route path="profile" element={<Profile />} />
+
             </Route>
 
-            {/* <Route element={<AuthLayout />}>
+            <Route element={<AuthLayout />}>
                 <Route path="login" element={<Login />} />
                 <Route path="register" element={<Register />} />
             </Route>
+            {/* 
 
             <Route path="concerts">
                 <Route index element={<ConcertsHome />} />

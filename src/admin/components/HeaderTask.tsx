@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 interface HeaderTaskProps {
     status: string;
     title: string;
@@ -29,11 +31,11 @@ export default function HeaderTask({ status, title, tasks, to }: HeaderTaskProps
                 <span className="bg-secondary-100 text-sm text-secondary-900 font-semibold px-2 py-1 rounded-lg">{tasks}</span>
             </div>
 
-            <a href={to} className="p-1 border border-secondary-100 rounded-lg hover:border-secondary-200 transition duration-300">
+            <Link to={to} className="p-1 border border-secondary-100 rounded-lg hover:border-secondary-200 transition duration-300" viewTransition>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 12H12M12 12H6M12 12V6M12 12V18" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" />
                 </svg>
-            </a>
+            </Link>
         </div>
     )
 }
