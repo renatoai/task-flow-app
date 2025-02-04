@@ -15,12 +15,12 @@ export default function Aside() {
                             : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'}>Dashboard</NavLink>
                     </li>
                     <li>
-                        <NavLink to="projects" className={({ isActive }) => isActive
+                        <NavLink to="/projects" className={({ isActive }) => isActive
                             ? 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold bg-primary text-white'
                             : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'}>Proyectos</NavLink>
                     </li>
                     <li>
-                        <NavLink to="tags" className={({ isActive }) => isActive
+                        <NavLink to="/tags" className={({ isActive }) => isActive
                             ? 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold bg-primary text-white'
                             : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'}>Categorias</NavLink>
                     </li>
@@ -28,7 +28,7 @@ export default function Aside() {
 
                 <ul>
                     <li>
-                        <NavLink to="profile" className={({ isActive }) => isActive
+                        <NavLink to="/profile" className={({ isActive }) => isActive
                             ? 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold bg-primary text-white'
                             : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'}>Perfil</NavLink>
                     </li>
