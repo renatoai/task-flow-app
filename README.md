@@ -1,53 +1,34 @@
-# React + TypeScript + Vite
+> [!NOTE]
+> Este proyecto actualmente está en desarrollo y solo incluye el Front-End. El Back-End está en proceso de implementación y estará disponible en versiones futuras.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Task Flow App - Proyecto de Tareas
 
-Currently, two official plugins are available:
+Este proyecto tiene como objetivo gestionar y organizar tareas de manera eficiente. Permite a los usuarios agregar, actualizar y eliminar tareas, asegurando un flujo de trabajo optimizado para mantener todo bajo control.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Descripción
 
-## Expanding the ESLint configuration
+Este es un sistema de gestión de tareas que permite organizar tareas diarias en diferentes categorías (trabajo, personal, etc.). Los usuarios pueden agregar nuevas tareas, marcarlas como completadas y eliminarlas cuando ya no sean necesarias. Este proyecto se enfoca en la simplicidad y usabilidad.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+#### Funcionalidades:
+- **Agregar tarea**: Puedes agregar nuevas tareas con detalles como nombre, descripción, imagen de previsualización, fecha y estado en la que se encuentra el proyecto como **`Pendiente`**, **`En Progreso`** y **`Completado`**.
+- **Actualizar tarea**: Permite editar tareas existentes.
+- **Eliminar tarea**: Elimina tareas que ya no son necesarias.
 
-- Configure the top-level `parserOptions` property like this:
+#### Tecnologías
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Este proyecto está construido con las siguientes tecnologías:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **React** para la estructura front-end.
+- **Tailwind** para el diseño y estilo.
+- **Typescript** para la lógica de la aplicación.
+- **Laravel** para el entorno de desarrollo Back-End y lógica de la aplicación.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+#### Licencia
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE]() para más detalles.
+
+#### Previsualización de la UI de la Aplicación
+
 <kbd>
-  <img src="/public/shop.png" alt="Task Flow App preview project" border="5px solid #09f">
+  <img src="/public/task-flow-app.png" alt="Task Flow App preview project" style="border-radius: 10px;">
 </kbd>
