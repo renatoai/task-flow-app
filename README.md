@@ -48,3 +48,6 @@ export default tseslint.config({
   },
 })
 ```
+<kbd>
+  <img src="/public/shop.png" alt="Task Flow App preview project" border="5px solid #09f">
+</kbd>
