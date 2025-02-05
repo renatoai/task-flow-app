@@ -2,16 +2,88 @@
 
 export default function Tags() {
     return (
-        <main className="w-full h-screen flex flex-row relative">
-            {/* <Navigation /> */}
-            <section className="flex flex-col p-10 ml-20 w-full gap-5">
-                <h1 className="text-4xl text-neutral-200">Dashboard</h1>
-                <div className="w-full h-80 border border-neutral-500/50 bg-neutral-800/20 rounded" />
-                <div className="flex flex-row gap-5 w-full">
-                    <div className="border-neutral-500/50 h-60 w-1/2 bg-neutral-800/20 rounded border" />
-                    <div className="border-neutral-500/50 h-60 w-1/2 bg-neutral-800/20 rounded border" />
+        <>
+            <h2 className="text-secondary-900 text-2xl font-semibold">Etiquetas</h2>
+            <div className="w-full bg-white flex flex-col gap-y-6 p-6 rounded-3xl border border-secondary-100">
+                <h3 className="text-xl text-secondary-900 font-semibold">Todas las Etiquetas</h3>
+
+
+                <div className="relative overflow-x-scroll">
+                    <table className="w-full text-base text-secondary-500 text-left rtl:text-right">
+                        <thead className="text-secondary-300 font-semibold border-b border-b-secondary-100">
+                            <tr>
+                                <th scope="col" className="px-4 py-4">
+                                    ID
+                                </th>
+                                <th scope="col" className="px-4 py-4">
+                                    Nombre
+                                </th>
+                                <th scope="col" className="px-4 py-4">
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr className="border-b border-b-secondary-100">
+                                <td className="px-4 py-3">
+                                    01
+                                </td>
+                                <td className="px-4 py-3">
+                                    <span className="p-2 rounded-lg border border-secondary-100 whitespace-nowrap">#Deseño ui</span>
+                                </td>
+                                <td className="px-4 py-3 flex items-center gap-x-3">
+                                    <a href="" className="p-2 border border-secondary-100 rounded-lg hover:border-primary-900 transition duration-300">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.729 12.7467C2.02067 11.8267 1.6665 11.3658 1.6665 10C1.6665 8.63334 2.02067 8.17418 2.729 7.25334C4.14317 5.41668 6.51484 3.33334 9.99984 3.33334C13.4848 3.33334 15.8565 5.41668 17.2707 7.25334C17.979 8.17501 18.3332 8.63418 18.3332 10C18.3332 11.3667 17.979 11.8258 17.2707 12.7467C15.8565 14.5833 13.4848 16.6667 9.99984 16.6667C6.51484 16.6667 4.14317 14.5833 2.729 12.7467Z" stroke="#323AFF" stroke-width="1.5" />
+                                            <path d="M12.5 10C12.5 10.663 12.2366 11.2989 11.7678 11.7678C11.2989 12.2366 10.663 12.5 10 12.5C9.33696 12.5 8.70107 12.2366 8.23223 11.7678C7.76339 11.2989 7.5 10.663 7.5 10C7.5 9.33696 7.76339 8.70107 8.23223 8.23223C8.70107 7.76339 9.33696 7.5 10 7.5C10.663 7.5 11.2989 7.76339 11.7678 8.23223C12.2366 8.70107 12.5 9.33696 12.5 10Z" stroke="#323AFF" stroke-width="1.5" />
+                                        </svg>
+                                    </a>
+                                    <a href="" className="p-2 border border-secondary-100 rounded-lg hover:border-secondary-200 transition duration-300">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.4995 8.87508V10.0001C17.4995 13.5356 17.4995 15.3033 16.4008 16.4013C15.3036 17.5 13.5352 17.5 9.99977 17.5C6.46438 17.5 4.69668 17.5 3.59797 16.4013C2.5 15.304 2.5 13.5356 2.5 10.0001C2.5 6.4646 2.5 4.69686 3.59797 3.59812C4.69743 2.50012 6.46438 2.50012 9.99977 2.50012H11.1247" stroke="#323AFF" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M13.4888 3.59133L13.9756 3.10459C14.3628 2.71741 14.888 2.49993 15.4356 2.5C15.9833 2.50007 16.5084 2.71768 16.8956 3.10496C17.2828 3.49224 17.5002 4.01747 17.5002 4.56509C17.5001 5.11272 17.2825 5.63789 16.8952 6.02507L16.4077 6.51182C16.4077 6.51182 15.3743 6.45107 14.4623 5.53832C13.5496 4.62633 13.4888 3.59208 13.4888 3.59208L9.0152 8.06506C8.71221 8.36806 8.56072 8.51955 8.43022 8.6868C8.27623 8.8843 8.14523 9.0963 8.03723 9.3228C7.94649 9.51405 7.87899 9.7173 7.74324 10.1238L7.30901 11.425M7.30901 11.425L7.02852 12.2665C6.99553 12.3647 6.99057 12.4701 7.0142 12.5709C7.03784 12.6717 7.08912 12.7639 7.16229 12.8371C7.23546 12.9104 7.32762 12.9618 7.42839 12.9855C7.52917 13.0093 7.63457 13.0044 7.73274 12.9715L8.57497 12.691M7.30901 11.425L8.57497 12.691M16.4085 6.51107L11.9349 10.9848C11.6319 11.2878 11.4804 11.4393 11.3131 11.5698C11.116 11.7234 10.9028 11.8552 10.6772 11.9628C10.4859 12.0535 10.2827 12.121 9.87618 12.2568L8.57497 12.691" stroke="#323AFF" stroke-width="1.5" />
+                                        </svg>
+                                    </a>
+                                    <a href="" className="p-2 border border-secondary-100 rounded-lg hover:border-secondary-200 transition duration-300">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.6415 3.33332C7.81367 2.84538 8.13295 2.42285 8.55534 2.12398C8.97772 1.82511 9.48241 1.66461 9.99984 1.66461C10.5173 1.66461 11.022 1.82511 11.4443 2.12398C11.8667 2.42285 12.186 2.84538 12.3582 3.33332M17.0832 4.99999H2.9165M15.694 7.08332L15.3107 12.8333C15.1632 15.045 15.0898 16.1508 14.369 16.825C13.6482 17.4992 12.539 17.5 10.3223 17.5H9.67734C7.46067 17.5 6.3515 17.5 5.63067 16.825C4.90984 16.1508 4.83567 15.045 4.689 12.8333L4.30567 7.08332M7.9165 9.16665L8.33317 13.3333M12.0832 9.16665L11.6665 13.3333" stroke="#323AFF" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr className="border-b border-b-secondary-100">
+                                <td className="px-4 py-4">
+                                    02
+                                </td>
+                                <td className="px-4 py-3">
+                                    <span className="p-2 rounded-lg border border-secondary-100 whitespace-nowrap">#App móvil</span>
+                                </td>
+                                <td className="px-4 py-3 flex items-center gap-x-3">
+                                    <a href="" className="p-2 border border-secondary-100 rounded-lg hover:border-secondary-200 transition duration-300">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.729 12.7467C2.02067 11.8267 1.6665 11.3658 1.6665 10C1.6665 8.63334 2.02067 8.17418 2.729 7.25334C4.14317 5.41668 6.51484 3.33334 9.99984 3.33334C13.4848 3.33334 15.8565 5.41668 17.2707 7.25334C17.979 8.17501 18.3332 8.63418 18.3332 10C18.3332 11.3667 17.979 11.8258 17.2707 12.7467C15.8565 14.5833 13.4848 16.6667 9.99984 16.6667C6.51484 16.6667 4.14317 14.5833 2.729 12.7467Z" stroke="#323AFF" stroke-width="1.5" />
+                                            <path d="M12.5 10C12.5 10.663 12.2366 11.2989 11.7678 11.7678C11.2989 12.2366 10.663 12.5 10 12.5C9.33696 12.5 8.70107 12.2366 8.23223 11.7678C7.76339 11.2989 7.5 10.663 7.5 10C7.5 9.33696 7.76339 8.70107 8.23223 8.23223C8.70107 7.76339 9.33696 7.5 10 7.5C10.663 7.5 11.2989 7.76339 11.7678 8.23223C12.2366 8.70107 12.5 9.33696 12.5 10Z" stroke="#323AFF" stroke-width="1.5" />
+                                        </svg>
+                                    </a>
+                                    <a href="" className="p-2 border border-secondary-100 rounded-lg hover:border-secondary-200 transition duration-300">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.729 12.7467C2.02067 11.8267 1.6665 11.3658 1.6665 10C1.6665 8.63334 2.02067 8.17418 2.729 7.25334C4.14317 5.41668 6.51484 3.33334 9.99984 3.33334C13.4848 3.33334 15.8565 5.41668 17.2707 7.25334C17.979 8.17501 18.3332 8.63418 18.3332 10C18.3332 11.3667 17.979 11.8258 17.2707 12.7467C15.8565 14.5833 13.4848 16.6667 9.99984 16.6667C6.51484 16.6667 4.14317 14.5833 2.729 12.7467Z" stroke="#323AFF" stroke-width="1.5" />
+                                            <path d="M12.5 10C12.5 10.663 12.2366 11.2989 11.7678 11.7678C11.2989 12.2366 10.663 12.5 10 12.5C9.33696 12.5 8.70107 12.2366 8.23223 11.7678C7.76339 11.2989 7.5 10.663 7.5 10C7.5 9.33696 7.76339 8.70107 8.23223 8.23223C8.70107 7.76339 9.33696 7.5 10 7.5C10.663 7.5 11.2989 7.76339 11.7678 8.23223C12.2366 8.70107 12.5 9.33696 12.5 10Z" stroke="#323AFF" stroke-width="1.5" />
+                                        </svg>
+                                    </a>
+                                    <a href="" className="p-2 border border-secondary-100 rounded-lg hover:border-secondary-200 transition duration-300">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.729 12.7467C2.02067 11.8267 1.6665 11.3658 1.6665 10C1.6665 8.63334 2.02067 8.17418 2.729 7.25334C4.14317 5.41668 6.51484 3.33334 9.99984 3.33334C13.4848 3.33334 15.8565 5.41668 17.2707 7.25334C17.979 8.17501 18.3332 8.63418 18.3332 10C18.3332 11.3667 17.979 11.8258 17.2707 12.7467C15.8565 14.5833 13.4848 16.6667 9.99984 16.6667C6.51484 16.6667 4.14317 14.5833 2.729 12.7467Z" stroke="#323AFF" stroke-width="1.5" />
+                                            <path d="M12.5 10C12.5 10.663 12.2366 11.2989 11.7678 11.7678C11.2989 12.2366 10.663 12.5 10 12.5C9.33696 12.5 8.70107 12.2366 8.23223 11.7678C7.76339 11.2989 7.5 10.663 7.5 10C7.5 9.33696 7.76339 8.70107 8.23223 8.23223C8.70107 7.76339 9.33696 7.5 10 7.5C10.663 7.5 11.2989 7.76339 11.7678 8.23223C12.2366 8.70107 12.5 9.33696 12.5 10Z" stroke="#323AFF" stroke-width="1.5" />
+                                        </svg>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </section>
-        </main>
+
+            </div >
+        </>
     )
 }

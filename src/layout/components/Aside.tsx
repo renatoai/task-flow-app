@@ -6,23 +6,53 @@ export default function Aside() {
     console.log(menu)
 
     return (
-        <aside className={menu ? "max-w-as w-full fixed left-0 top-[75px] bottom-0 z-10 bg-white px-4 py-8 border-r border-r-secondary-100 transition duration-300 ease-in-out md:top-0" : "max-w-as w-full fixed -left-full top-[75px] bottom-0 z-10 bg-white px-4 py-8 border-r border-r-secondary-100 transition duration-300 ease-in-out md:opacity-100 md:top-0 md:left-0"}>
+        <aside className={menu ? "max-w-as w-full fixed left-0 top-[75px] bottom-0 z-10 bg-white px-4 flex flex-col gap-y-6 py-8 border-r border-r-secondary-100 transition duration-300 ease-in-out md:top-0" : "max-w-as w-full fixed -left-full top-[75px] bottom-0 z-10 bg-white px-4 flex flex-col gap-y-6 py-8 border-r border-r-secondary-100 transition duration-300 ease-in-out md:opacity-100 md:top-0 md:left-0"}>
+            <div className="flex items-center gap-x-2">
+                <img src="/alphaui_logo.png" alt="" width={40} height={40} />
+                <h2 className="text-2xl text-secondary-900 font-bold">Task Flow</h2>
+            </div>
             <nav className="w-full h-full flex flex-col justify-between" onClick={() => setMenu(!menu)}>
                 <ul className="flex flex-col gap-y-2">
                     <li>
                         <NavLink to="/" className={({ isActive }) => isActive
                             ? 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold bg-primary text-white'
-                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} >Dashboard</NavLink>
+                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} >
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.6665 10.67C1.6665 8.7625 1.6665 7.80916 2.09984 7.01916C2.5315 6.22833 3.32234 5.73833 4.90317 4.75666L6.56984 3.7225C8.24067 2.685 9.0765 2.16666 9.99984 2.16666C10.9232 2.16666 11.7582 2.685 13.4298 3.7225L15.0965 4.75666C16.6773 5.73833 17.4682 6.22833 17.9007 7.01916C18.3332 7.81 18.3332 8.7625 18.3332 10.6692V11.9375C18.3332 15.1875 18.3332 16.8133 17.3565 17.8233C16.3798 18.8333 14.809 18.8333 11.6665 18.8333H8.33317C5.19067 18.8333 3.619 18.8333 2.64317 17.8233C1.66734 16.8133 1.6665 15.1883 1.6665 11.9375V10.67Z" stroke="currentColor" stroke-width="1.5" />
+                                <path d="M10 13V15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                            Dashboard
+                        </NavLink>
                     </li>
                     <li>
                         <NavLink to="/projects" className={({ isActive }) => isActive
                             ? 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold bg-primary text-white'
-                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} viewTransition>Proyectos</NavLink>
+                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} viewTransition>
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.33301 12.1667H9.99967M9.99967 12.1667H11.6663M9.99967 12.1667V13.8333M9.99967 12.1667V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M1.6665 6.29167C1.6665 5.55584 1.6665 5.18834 1.72484 4.88167C1.84919 4.2232 2.16912 3.6175 2.64288 3.14359C3.11664 2.66968 3.72224 2.34956 4.38067 2.22501C4.68817 2.16667 5.0565 2.16667 5.7915 2.16667C6.11317 2.16667 6.27484 2.16667 6.42984 2.18084C7.09738 2.24353 7.73049 2.50607 8.2465 2.93417C8.3665 3.03334 8.47984 3.14667 8.70817 3.37501L9.1665 3.83334C9.8465 4.51334 10.1865 4.85334 10.5932 5.07917C10.8167 5.20375 11.0538 5.30218 11.2998 5.37251C11.7482 5.50001 12.229 5.50001 13.1898 5.50001H13.5015C15.6948 5.50001 16.7923 5.50001 17.5048 6.14167C17.5709 6.2 17.6332 6.26223 17.6915 6.32834C18.3332 7.04084 18.3332 8.13834 18.3332 10.3317V12.1667C18.3332 15.3092 18.3332 16.8808 17.3565 17.8567C16.3798 18.8325 14.809 18.8333 11.6665 18.8333H8.33317C5.19067 18.8333 3.619 18.8333 2.64317 17.8567C1.66734 16.88 1.6665 15.3092 1.6665 12.1667V6.29167Z" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                            Proyectos
+                        </NavLink>
                     </li>
                     <li>
                         <NavLink to="/tags" className={({ isActive }) => isActive
                             ? 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold bg-primary text-white'
-                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} viewTransition>Categorias</NavLink>
+                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} viewTransition>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_183_22)">
+                                    <path d="M1.6665 10C1.6665 6.07167 1.6665 4.10751 2.8865 2.88667C4.10817 1.66667 6.0715 1.66667 9.99984 1.66667C13.9282 1.66667 15.8923 1.66667 17.1123 2.88667C18.3332 4.10834 18.3332 6.07167 18.3332 10C18.3332 13.9283 18.3332 15.8925 17.1123 17.1125C15.8932 18.3333 13.9282 18.3333 9.99984 18.3333C6.0715 18.3333 4.10734 18.3333 2.8865 17.1125C1.6665 15.8933 1.6665 13.9283 1.6665 10Z" stroke="currentColor" stroke-width="1.5" />
+                                    <path d="M5 13.1667L5.9525 14.1667L8.33333 11.6667M5 7.33334L5.9525 8.33334L8.33333 5.83334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M10.833 7.5H14.9997M10.833 13.3333H14.9997" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_183_22">
+                                        <rect width="20" height="20" fill="currentColor" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Etiquetas
+                        </NavLink>
                     </li>
                 </ul>
 
@@ -30,11 +60,23 @@ export default function Aside() {
                     <li>
                         <NavLink to="/profile" className={({ isActive }) => isActive
                             ? 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold bg-primary text-white'
-                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} viewTransition>Perfil</NavLink>
+                            : 'w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white transition duration-200'} viewTransition>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0003 8.33335C11.8413 8.33335 13.3337 6.84097 13.3337 5.00002C13.3337 3.15907 11.8413 1.66669 10.0003 1.66669C8.15938 1.66669 6.66699 3.15907 6.66699 5.00002C6.66699 6.84097 8.15938 8.33335 10.0003 8.33335Z" stroke="currentColor" stroke-width="1.5" />
+                                <path d="M16.6668 14.5834C16.6668 16.6542 16.6668 18.3334 10.0002 18.3334C3.3335 18.3334 3.3335 16.6542 3.3335 14.5834C3.3335 12.5125 6.3185 10.8334 10.0002 10.8334C13.6818 10.8334 16.6668 12.5125 16.6668 14.5834Z" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                            Perfil
+                        </NavLink>
                     </li>
                     <li>
                         <form action="login">
-                            <button className="w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white active:bg-primary transition duration-200">Cerrar Sesión</button>
+                            <button className="w-full flex items-center gap-x-2 px-4 py-2 rounded-lg font-semibold text-secondary-500 hover:bg-primary hover:text-white active:bg-primary transition duration-200">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.54603 18.9583C8.68519 18.9583 9.60436 18.9583 10.3269 18.8608C11.0769 18.7608 11.7085 18.5441 12.2102 18.0433C12.6469 17.6058 12.8685 17.0683 12.9844 16.4366C13.0969 15.8225 13.1185 15.0716 13.1235 14.17C13.1244 14.0042 13.0594 13.8449 12.9428 13.7271C12.8262 13.6092 12.6676 13.5425 12.5019 13.5416C12.3361 13.5408 12.1768 13.6058 12.0589 13.7223C11.9411 13.8389 11.8744 13.9976 11.8735 14.1633C11.8685 15.0741 11.8452 15.72 11.7552 16.2108C11.6677 16.6825 11.5285 16.9566 11.326 17.1591C11.0952 17.39 10.771 17.54 10.1594 17.6225C9.53019 17.7066 8.69603 17.7083 7.50019 17.7083H6.66686C5.47019 17.7083 4.63603 17.7066 4.00686 17.6225C3.39519 17.54 3.07186 17.3891 2.84019 17.1591C2.61019 16.9283 2.46019 16.605 2.37769 15.9925C2.29269 15.3641 2.29186 14.5291 2.29186 13.3333L2.29186 6.66665C2.29186 5.47081 2.29269 4.63665 2.37769 4.00665C2.46019 3.39498 2.61019 3.07165 2.84103 2.84081C3.07186 2.60998 3.39519 2.45998 4.00686 2.37748C4.63603 2.29331 5.47019 2.29165 6.66686 2.29165H7.50019C8.69603 2.29165 9.53019 2.29331 10.1602 2.37748C10.771 2.45998 11.0952 2.61081 11.326 2.84081C11.5285 3.04415 11.6677 3.31748 11.7552 3.78915C11.8452 4.27998 11.8685 4.92581 11.8735 5.83665C11.874 5.91872 11.8906 5.99991 11.9224 6.07557C11.9542 6.15123 12.0006 6.21989 12.0589 6.27761C12.1173 6.33534 12.1864 6.38101 12.2624 6.41201C12.3384 6.44302 12.4198 6.45875 12.5019 6.45831C12.5839 6.45788 12.6651 6.44128 12.7408 6.40946C12.8164 6.37765 12.8851 6.33124 12.9428 6.2729C13.0006 6.21455 13.0462 6.14541 13.0772 6.06941C13.1082 5.99342 13.124 5.91206 13.1235 5.82998C13.1185 4.92831 13.0969 4.17748 12.9844 3.56331C12.8677 2.93165 12.6469 2.39415 12.2094 1.95665C11.7085 1.45498 11.076 1.23998 10.326 1.13831C9.60436 1.04165 8.68519 1.04165 7.54603 1.04165H6.62103C5.48103 1.04165 4.56269 1.04165 3.84019 1.13831C3.09019 1.23998 2.45853 1.45498 1.95686 1.95665C1.45519 2.45831 1.24019 3.08998 1.13853 3.83998C1.04186 4.56248 1.04186 5.48165 1.04186 6.62081L1.04186 13.3791C1.04186 14.5183 1.04186 15.4375 1.13853 16.16C1.23936 16.91 1.45519 17.5416 1.95686 18.0433C2.45853 18.545 3.09019 18.76 3.84019 18.8608C4.56269 18.9583 5.48186 18.9583 6.62103 18.9583H7.54603Z" fill="currentColor" />
+                                    <path d="M7.50019 10.625C7.33443 10.625 7.17545 10.5592 7.05824 10.4419C6.94103 10.3247 6.87519 10.1658 6.87519 10C6.87519 9.83424 6.94103 9.67527 7.05824 9.55806C7.17545 9.44085 7.33443 9.375 7.50019 9.375L16.6444 9.375L15.0102 7.975C14.8842 7.86715 14.8062 7.71367 14.7934 7.54832C14.7806 7.38298 14.834 7.21931 14.9419 7.09334C15.0497 6.96736 15.2032 6.88938 15.3685 6.87657C15.5339 6.86375 15.6975 6.91715 15.8235 7.025L18.7402 9.525C18.8088 9.58368 18.8639 9.65652 18.9017 9.73852C18.9394 9.82052 18.959 9.90972 18.959 10C18.959 10.0903 18.9394 10.1795 18.9017 10.2615C18.8639 10.3435 18.8088 10.4163 18.7402 10.475L15.8235 12.975C15.7611 13.0284 15.6889 13.069 15.6108 13.0945C15.5327 13.1199 15.4504 13.1298 15.3685 13.1234C15.2867 13.1171 15.2068 13.0947 15.1336 13.0575C15.0604 13.0203 14.9953 12.969 14.9419 12.9067C14.8884 12.8443 14.8479 12.772 14.8224 12.6939C14.7969 12.6159 14.7871 12.5336 14.7934 12.4517C14.7998 12.3698 14.8222 12.29 14.8594 12.2168C14.8966 12.1436 14.9478 12.0784 15.0102 12.025L16.6435 10.625L7.50019 10.625Z" fill="currentColor" />
+                                </svg>
+                                Cerrar Sesión
+                            </button>
                         </form>
                     </li>
                 </ul>

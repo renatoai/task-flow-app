@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 export default function Dashboard() {
   return (
@@ -100,13 +101,13 @@ export default function Dashboard() {
             <h3 className="text-xl text-secondary-900 font-semibold">Nueva Tarea</h3>
             <p>Implica crear y asignar una nueva tarea dentro del sistema de gestión de proyectos. El</p>
           </div>
-          <a href="" className="bg-primary flex justify-center items-center gap-x-2 text-white font-semibold px-4 py-3 rounded-lg">
+          <Link to="/projects" className="bg-primary flex justify-center items-center gap-x-2 text-white font-semibold px-4 py-3 rounded-lg">
             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.5 10.9047H10.5M10.5 10.9047H5.5M10.5 10.9047V5.90466M10.5 10.9047V15.9047" stroke="white" stroke-width="2" stroke-linecap="round" />
             </svg>
 
             Añadir Nueva Tarea
-          </a>
+          </Link>
         </div>
       </div>
     </>
